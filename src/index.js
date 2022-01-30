@@ -9,5 +9,5 @@ module.exports = function toReadable (number) {
   	return tens[Math.floor(number/10)-2] + (digit? " " + num[digit]: "");
   if (number < 1000) 
   	return num[Math.floor(number/100)] +" hundred" + (number%100 == 0? "": " " + toReadable(number%100));
-  return toReadable(Math.floor(number/1000)) + " thousand" + (number%1000 != 0? " " + toReadable(number%1000): "");
+  return num[Math.floor(number/1000)] + " thousand" + (number%1000 != 0? " " + toReadable(number%1000): "");
 }
